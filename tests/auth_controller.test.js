@@ -3,7 +3,7 @@
 const auth_controller = require(`../auth_controller`);
 
 test (`returns false for invalid user credentials`, () => {
-    expect(auth_controller.login(`username`, `1235`)).toBe(false);
+    expect(auth_controller.login(`username`, `1235`)).toBeInstanceOf(NetworkResponse);
 });
 
 test (`returns false for missing user credentials`, () => {
